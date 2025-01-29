@@ -20,7 +20,7 @@ public class AlumnoControlador {
     @GetMapping("/alumnos")
     public String listarAlumnos(Model model){
         List<Alumno> alumnos = restTemplate.getForObject("http://localhost:8080/api/alumnos", List.class);
-        model.addAttribute("Alumno", alumnos);
-        return "alumnos";
+        model.addAttribute("alumnos", alumnos);
+        return "/Alumnos/alumno";
     }
 }
