@@ -16,7 +16,7 @@ public class AlumnoControlador {
     private RestTemplate restTemplate;
 
 
-    //NO ENTENDER
+    //NO ENTENDER - leer explicacion chatgpt
     @GetMapping("/alumnos")
     public String listarAlumnos(Model model){
         List<Alumno> alumnos = restTemplate.getForObject("http://localhost:8080/api/alumnos", List.class);
